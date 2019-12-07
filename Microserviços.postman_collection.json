@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "ecc188e1-4f96-4575-99a1-36ed2f3e853c",
+		"name": "Microserviços",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Loja - Compra",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain-loja}}",
+					"host": [
+						"{{domain-loja}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Loja - Compra",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"itens\": [\n\t\t{ \n\t\t\t\"id\": 1,\n\t\t\t\"quantidade\": 5\n\t\t},\n\t\t{ \n\t\t\t\"id\": 2,\n\t\t\t\"quantidade\": 1\n\t\t}\n\t],\n\t\"endereco\": {\n\t\t\"rua\": \"Rua Vega\",\n\t\t\"numero\": 32,\n\t\t\"estado\": \"GO\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{domain-loja}}/compra",
+					"host": [
+						"{{domain-loja}}"
+					],
+					"path": [
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fornecedor - Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain-fornecedor}}/info/GO",
+					"host": [
+						"{{domain-fornecedor}}"
+					],
+					"path": [
+						"info",
+						"GO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eureka - apps",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain-eureka}}/eureka/apps",
+					"host": [
+						"{{domain-eureka}}"
+					],
+					"path": [
+						"eureka",
+						"apps"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
